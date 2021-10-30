@@ -1,4 +1,4 @@
-name: Run_unit_test
+name: Run_builds
 
 on:
   push:
