@@ -32,7 +32,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":core"))
+    implementation(project(":core:core-ui"))
+    implementation(project(":core:core-utils"))
+    implementation(project(":core:api"))
 
     implementation(Libs.Core.kotlin)
     implementation(Libs.Android.appCompat)
