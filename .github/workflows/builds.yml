@@ -20,11 +20,13 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: gradle
-      - name: Run analyze code
-      - run: ./gradlew detekt
-      - run: ./gradlew lint
+      - name: Run detekt
+        run: ./gradlew detekt
+      - name: Run lint
+        run: ./gradlew lint
 
   unit-test:
+    needs: analyze-code
     name: Test
     runs-on: ubuntu-latest
     steps:
