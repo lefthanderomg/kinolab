@@ -21,7 +21,8 @@ jobs:
           distribution: 'adopt'
           cache: gradle
       - name: Run analyze code
-        run: ./gradlew lint
+      - run: ./gradlew detekt
+      - run: ./gradlew lint
 
   unit-test:
     name: Test
