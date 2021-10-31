@@ -35,6 +35,7 @@ object Libs {
         const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07"
         const val junit = "androidx.compose.ui:ui-test-junit4:1.0.1"
         const val navigation = "androidx.navigation:navigation-compose:2.4.0-beta01"
+        const val inset = "com.google.accompanist:accompanist-insets:0.19.0"
     }
 
     object Dagger {

@@ -20,7 +20,16 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
+    implementation(Libs.Android.appCompat)
+
+    implementation(Libs.Compose.ui)
+    implementation(Libs.Compose.uiTooling)
+    implementation(Libs.Compose.material)
 }

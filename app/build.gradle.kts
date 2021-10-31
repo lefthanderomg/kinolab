@@ -48,6 +48,10 @@ android {
             excludes += "META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
@@ -66,4 +70,11 @@ dependencies {
     implementation(Libs.Dagger.daggerHilt)
     implementation(Libs.Dagger.daggerHiltNavigationCompose)
     kapt(Libs.Dagger.daggerCompiler)
+
+    implementation(Libs.Compose.activity)
+    implementation(Libs.Compose.ui)
+    implementation(Libs.Compose.uiTooling)
+    implementation(Libs.Compose.material)
+    implementation(Libs.Compose.navigation)
+    implementation(Libs.Compose.inset)
 }
