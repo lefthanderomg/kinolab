@@ -1,7 +1,7 @@
 object Libs {
 
     object Core {
-        private const val kotlinVersion = "1.5.31"
+        private const val kotlinVersion = "1.5.21"
         const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
         const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         const val buildGradle = "com.android.tools.build:gradle:7.0.3"
@@ -26,7 +26,7 @@ object Libs {
     }
 
     object Compose {
-        private const val composeVersion = "1.0.1"
+        const val composeVersion = "1.0.1"
 
         const val ui = "androidx.compose.ui:ui:$composeVersion"
         const val uiTooling = "androidx.compose.ui:ui-tooling:$composeVersion"

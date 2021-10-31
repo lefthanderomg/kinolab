@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.Scaffold
+import androidx.compose.runtime.Composable
 import com.google.accompanist.insets.ProvideWindowInsets
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,3 +29,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+//@Composable
+//private fun KinopubBottomNavigation() {
+//
+//}

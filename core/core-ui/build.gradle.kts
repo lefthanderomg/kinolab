@@ -10,6 +10,10 @@ android {
     defaultConfig {
         minSdk = Config.minSdk
         targetSdk = Config.targetSdk
+
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -24,10 +28,15 @@ android {
     buildFeatures {
         compose = true
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Libs.Compose.composeVersion
+    }
 }
 
 dependencies {
     implementation(Libs.Android.appCompat)
+    implementation(Libs.Android.material)
 
     implementation(Libs.Compose.ui)
     implementation(Libs.Compose.uiTooling)
