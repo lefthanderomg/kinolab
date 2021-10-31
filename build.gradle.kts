@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath(Libs.Core.buildGradle)
         classpath(Libs.Core.kotlinPlugin)
+        classpath(Libs.Dagger.daggerPlugin)
     }
 }
 
