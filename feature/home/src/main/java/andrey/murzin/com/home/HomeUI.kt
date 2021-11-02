@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_PARAMETER")
+
 package andrey.murzin.com.home
 
 import androidx.compose.material.Text
