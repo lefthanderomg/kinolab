@@ -1,5 +1,6 @@
 package andrey.murzin.com.kinolab
 
+import andrey.murzin.com.home.HomeScreen
 import andrey.murzin.core.Theme
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -48,7 +49,7 @@ class MainActivity : ComponentActivity() {
                             startDestination = Screen.Home.route,
                             modifier = Modifier.padding(innerPadding)
                         ) {
-                            composable(Screen.Home.route) { }
+                            composable(Screen.Home.route) { HomeScreen()}
                         }
                     }
                 }
