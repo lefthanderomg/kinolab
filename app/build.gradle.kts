@@ -81,4 +81,5 @@ dependencies {
     implementation(Libs.Compose.material)
     implementation(Libs.Compose.navigation)
     implementation(Libs.Compose.inset)
+    implementation(Libs.Compose.materialIcon)
 }
