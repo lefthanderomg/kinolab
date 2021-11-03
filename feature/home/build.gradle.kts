@@ -1,4 +1,3 @@
-import java.util.Properties
 
 plugins {
     id("com.android.library")
@@ -12,12 +11,6 @@ kapt {
     useBuildCache = true
 }
 
-val localProperties = Properties()
-val localPropertiesFile = File(rootProject.rootDir, "local.properties")
-if (localPropertiesFile.exists() && localPropertiesFile.isFile) {
-    localPropertiesFile.inputStream().use( localProperties::load)
-}
-
 android {
     compileSdk = Config.compileSdk
 
@@ -28,9 +21,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
-        val themoviedbApiKey = checkNotNull(localProperties.getProperty("THEMOVIEDB_API_KEY"))
-        buildConfigField("String", "THEMOVIEDB_API_KEY", "\"$themoviedbApiKey\"")
     }
 
     buildTypes {
