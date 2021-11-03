@@ -23,7 +23,7 @@ jobs:
       - name: Load API Token from secrets
         env:
           THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
-        run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
+        run: echo THEMOVIEDB_API_KEY=\"1213\" > ./local.properties
       - name: Run detekt
         run: ./gradlew detekt
       - name: Run lint
