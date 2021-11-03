@@ -1,10 +1,11 @@
 object Libs {
 
     object Core {
-        private const val kotlinVersion = "1.5.21"
+        const val kotlinVersion = "1.5.21"
         const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
         const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         const val buildGradle = "com.android.tools.build:gradle:7.0.3"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
     }
 
     object Android {
@@ -15,7 +16,8 @@ object Libs {
         const val material = "com.google.android.material:material:1.4.0"
 
         const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
-        const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion"
+        const val viewModelCompose =
+            "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion"
         const val lifeCycle = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
     }
 
@@ -46,6 +48,17 @@ object Libs {
         const val daggerHilt = "com.google.dagger:hilt-android:$daggerVersion"
         const val daggerCompiler = "com.google.dagger:hilt-android-compiler:$daggerVersion"
 
-        const val daggerHiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
+        const val daggerHiltNavigationCompose =
+            "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
+    }
+
+    object Network {
+        const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+        const val okhttp = "com.squareup.okhttp3:okhttp:4.9.0"
+        const val kotlinSerializationConverter =
+            "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
+        const val kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0"
+        const val kotlinSerializationPlugin =
+            "org.jetbrains.kotlin:kotlin-serialization:${Core.kotlinVersion}"
     }
 }

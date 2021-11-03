@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 import java.util.Properties
 
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("io.gitlab.arturbosch.detekt")
     id("dagger.hilt.android.plugin")
+    id("kotlinx-serialization")
     kotlin("kapt")
 }
 
@@ -76,6 +76,7 @@ dependencies {
     implementation(project(":feature:home"))
 
     implementation(Libs.Core.kotlin)
+    implementation(Libs.Core.coroutines)
     implementation(Libs.Android.appCompat)
     implementation(Libs.Android.material)
 
