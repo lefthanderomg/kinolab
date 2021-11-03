@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Load API Token from secrets
         env:
-          THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
+          THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY}}
         run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
       - uses: actions/checkout@v2
       - name: set up JDK 11
