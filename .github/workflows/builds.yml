@@ -20,7 +20,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: gradle
-      - name: Load API Token from secrets
+      - name: Load API KEY from secrets
         env:
           THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
         run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
@@ -41,6 +41,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: gradle
+      - name: Load API KEY from secrets
+        env:
+          THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
+        run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Run unit test
