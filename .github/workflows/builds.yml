@@ -12,9 +12,10 @@ jobs:
   analyze-code:
     name: Analyze code
     runs-on: ubuntu-latest
-    env:
-      THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
-    run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
+    - name: Load API Token from secrets
+      env:
+        THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
+      run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
     steps:
       - uses: actions/checkout@v2
       - name: set up JDK 11
