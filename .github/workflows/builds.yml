@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
+    run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
     steps:
       - uses: actions/checkout@v2
       - name: set up JDK 11
