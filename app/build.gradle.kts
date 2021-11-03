@@ -40,7 +40,7 @@ android {
         }
 
         val themoviedbApiKey = checkNotNull(localProperties.getProperty("THEMOVIEDB_API_KEY"))
-        buildConfigField("String", "THEMOVIEDB_API_KEY", "\"$themoviedbApiKey\"")
+        buildConfigField("String", "THEMOVIEDB_API_KEY", themoviedbApiKey)
     }
 
     buildTypes {
