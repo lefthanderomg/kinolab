@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface MoviesApi {
 
-    @GET("movie/top_rated?api_key=2da3bfb8f2010c50ca19ab4e13c29f17&language=en-US&page=1")
+    @GET("movie/top_rated")
     suspend fun getTopRated() : Result<MoviePageModel>
 }
