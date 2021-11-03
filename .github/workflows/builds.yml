@@ -13,10 +13,6 @@ jobs:
     name: Analyze code
     runs-on: ubuntu-latest
     steps:
-      - name: Load API Token from secrets
-        env:
-          THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
-        run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
       - uses: actions/checkout@v2
       - name: set up JDK 11
         uses: actions/setup-java@v2
@@ -24,6 +20,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: gradle
+      - name: Load API Token from secrets
+        env:
+          THEMOVIEDB_API_KEY: ${{ secrets.THEMOVIEDB_API_KEY }}
+        run: echo THEMOVIEDB_API_KEY=\"$THEMOVIEDB_API_KEY\" > ./local.properties
       - name: Load API Token from secrets
       - name: Run detekt
         run: ./gradlew detekt

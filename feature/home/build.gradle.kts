@@ -29,7 +29,7 @@ android {
             useSupportLibrary = true
         }
 
-        val themoviedbApiKey = checkNotNull(localProperties.getProperty("themoviedb.apikey"))
+        val themoviedbApiKey = checkNotNull(localProperties.getProperty("THEMOVIEDB_API_KEY"))
         buildConfigField("String", "THEMOVIEDB_API_KEY", "\"$themoviedbApiKey\"")
     }
 
