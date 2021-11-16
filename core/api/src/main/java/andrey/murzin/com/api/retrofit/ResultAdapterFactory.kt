@@ -32,9 +32,3 @@ class ResultAdapterFactory : CallAdapter.Factory() {
         return null
     }
 }
-
-
-
-
-
-
