@@ -9,4 +9,5 @@ dependencies {
     implementation(Libs.Network.okhttp)
     implementation(Libs.Network.kotlinSerialization)
     implementation(Libs.Network.kotlinSerializationConverter)
+    implementation(Libs.Network.logging)
 }

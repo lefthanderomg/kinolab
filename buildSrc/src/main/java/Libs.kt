@@ -53,8 +53,11 @@ object Libs {
     }
 
     object Network {
+        private const val okhttpVersion = "4.9.0"
+
         const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
-        const val okhttp = "com.squareup.okhttp3:okhttp:4.9.0"
+        const val okhttp = "com.squareup.okhttp3:okhttp:$okhttpVersion"
+        const val logging = "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
         const val kotlinSerializationConverter =
             "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
         const val kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0"
